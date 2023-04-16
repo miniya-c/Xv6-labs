@@ -54,6 +54,7 @@ void panic(char*);
 struct cmd *parsecmd(char*);
 
 // Execute cmd.  Never returns.
+__attribute__((noreturn)) // make qemu报错时添加的
 void
 runcmd(struct cmd *cmd)
 {
